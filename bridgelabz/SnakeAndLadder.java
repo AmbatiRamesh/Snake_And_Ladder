@@ -2,7 +2,7 @@ package com.bridgelabz;
 public class SnakeAndLadder {
     public static void main(String[] args) {
         System.out.println("------Welcome to Snake and Ladder Problem------");
-        int startPosition = 0, position = 0, WINNING_POSITION = 100;
+        int startPosition = 0, position = 0,WINNING_POSITION=100;
         while (position < WINNING_POSITION) {
             System.out.println("Start position is: " + startPosition);
             int diceNumber = (int) Math.floor(Math.random() * 10) % 6 + 1;
@@ -13,6 +13,9 @@ public class SnakeAndLadder {
                 case 1:
                     position = diceNumber + position;
                     System.out.println("Ladder");
+                    if (position > 100) {
+                        position = 100;
+                    }
                     System.out.println("Position for the player after the ladder is : " + position);
                     break;
                 case 2:
